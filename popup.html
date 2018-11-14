@@ -1,0 +1,70 @@
+<!doctype html>
+<html>
+  <head>
+    <title>Copy Tab Info Popup</title>
+    <style>
+      body {
+        overflow: hidden;
+        margin: 0px;
+        padding: 0px;
+        background: white;
+      }
+
+      div:first-child {
+        margin-top: 0px;
+      }
+
+      div {
+        padding: 1px 3px;
+        font-family: sans-serif;
+        width: 400px;
+        margin-top: 8px;
+        background: white;
+      }
+
+      div.popup-menu-group-title {
+        text-align: center;
+        background: blue;
+        color: white;
+        font-weight: bold;
+      }
+
+      div.popup-menu-item {
+        cursor: pointer;
+        text-align: left;
+      }
+
+      div.popup-menu-item:hover {
+        background: #aaaaaa;
+      }
+    </style>
+    <script src="node_modules/seq-exec/seq-exec.js"></script>
+    <script src="node_modules/utils4js/clipboard.js"></script>
+    <script src="popup.js"></script>
+  </head>
+  <body>
+    <div class="popup-menu-group-title">Active tab in current window:</div>
+    <div class="popup-menu-item" id="copy_title_of_active_tab_in_current_window_as_string">Copy title of active tab in current window as string</div>
+    <div class="popup-menu-item" id="copy_url_of_active_tab_in_current_window_as_string">Copy URL of active tab in current window as string</div>
+    <div class="popup-menu-item" id="copy_link_of_active_tab_in_current_window_as_html">Copy link of active tab in current window as HTML</div>
+    <div class="popup-menu-item" id="copy_link_of_active_tab_in_current_window_as_markdown">Copy link of active tab in current window as Markdown</div>
+    <div class="popup-menu-item" id="copy_link_of_active_tab_in_current_window_as_markdown_ordered_list_item">Copy link of active tab in current window as Markdown ordered list item</div>
+    <div class="popup-menu-item" id="copy_link_of_active_tab_in_current_window_as_markdown_unordered_list_item">Copy link of active tab in current window as Markdown unordered list item</div>
+
+    <div class="popup-menu-group-title">All tabs in current window:</div>
+    <div class="popup-menu-item" id="copy_titles_of_all_tabs_in_current_window_as_text">Copy titles of all tabs in current window as text</div>
+    <div class="popup-menu-item" id="copy_urls_of_all_tabs_in_current_window_as_text">Copy URLs of all tabs in current window as text</div>
+    <div class="popup-menu-item" id="copy_links_of_all_tabs_in_current_window_as_html_ordered_list">Copy links of all tabs in current window as HTML ordered list</div>
+    <div class="popup-menu-item" id="copy_links_of_all_tabs_in_current_window_as_html_unordered_list">Copy links of all tabs in current window as HTML unordered list</div>
+    <div class="popup-menu-item" id="copy_links_of_all_tabs_in_current_window_as_markdown_ordered_list">Copy links of all tabs in current window as Markdown ordered list</div>
+    <div class="popup-menu-item" id="copy_links_of_all_tabs_in_current_window_as_markdown_unordered_list">Copy links of all tabs in current window as Markdown unordered list</div>
+
+    <div class="popup-menu-group-title">All tabs in all windows:</div>
+    <div class="popup-menu-item" id="copy_titles_of_all_tabs_in_all_windows_as_text">Copy titles of all tabs in all windows as text</div>
+    <div class="popup-menu-item" id="copy_urls_of_all_tabs_in_all_windows_as_text">Copy URLs of all tabs in all windows as text</div>
+    <div class="popup-menu-item" id="copy_links_of_all_tabs_in_all_windows_as_html_ordered_list">Copy links of all tabs in all windows as HTML ordered list</div>
+    <div class="popup-menu-item" id="copy_links_of_all_tabs_in_all_windows_as_html_unordered_list">Copy links of all tabs in all windows as HTML unordered list</div>
+    <div class="popup-menu-item" id="copy_links_of_all_tabs_in_all_windows_as_markdown_ordered_list">Copy links of all tabs in all windows as Markdown ordered list</div>
+    <div class="popup-menu-item" id="copy_links_of_all_tabs_in_all_windows_as_markdown_unordered_list">Copy links of all tabs in all windows as Markdown unordered list</div>
+  </body>
+</html>

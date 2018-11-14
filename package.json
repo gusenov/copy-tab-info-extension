@@ -1,0 +1,13 @@
+{
+  "description": "Chromium Extension for copy tab info to clipboard.",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/gusenov/copy-tab-info-extension.git"
+  },
+  "homepage": "https://github.com/gusenov/copy-tab-info-extension#readme",
+  "license": "MIT",
+  "dependencies": {
+    "seq-exec": "0.0.1",
+    "utils4js": "^0.1.7"
+  }
+}

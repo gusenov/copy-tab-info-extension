@@ -33,7 +33,7 @@ function getLinksOfAllTabsInWindowAsHtmlList(isOrdered, windowId, callback) {
     var linksOfAllTabsInWindow = (isOrdered ? "<ol>" : "<ul>") + "\r\n";
     var tabsInCurrentWindowLength = tabsInWindow.length;
     for (var t = 0; t < tabsInCurrentWindowLength; ++t) {
-      linksOfAllTabsInWindow += "\t<li><a href=\"" + tabsInWindow[t].url + "\">" + tabsInWindow[t].title + "</a></li>\r\n";
+      linksOfAllTabsInWindow += "\t<li><a href=\"" + tabsInWindow[t].url + "\" rel=\"nofollow\">" + tabsInWindow[t].title + "</a></li>\r\n";
     }
     linksOfAllTabsInWindow += (isOrdered ? "</ol>" : "</ul>") + "\r\n";
     callback(linksOfAllTabsInWindow);
@@ -145,7 +145,14 @@ function popupMenuItemClick(e) {
 
     case "copy_link_of_active_tab_in_current_window_as_html":
     getActiveTabInCurrentWindow(function (activeTabInCurrentWindow) {
-      ClipboardUtils.copyText("<a href=\"" + activeTabInCurrentWindow.url + "\">" + activeTabInCurrentWindow.title + "<a/>");
+      ClipboardUtils.copyText("<a href=\"" + activeTabInCurrentWindow.url + "\" rel=\"nofollow\">" + activeTabInCurrentWindow.title + "</a>");
+      window.close();
+    });
+    break;
+
+    case "copy_link_of_active_tab_in_current_window_as_rednotebook":
+    getActiveTabInCurrentWindow(function (activeTabInCurrentWindow) {
+      ClipboardUtils.copyText("[" + activeTabInCurrentWindow.title + " \"\"http://" + activeTabInCurrentWindow.url + "\"\"]");
       window.close();
     });
     break;

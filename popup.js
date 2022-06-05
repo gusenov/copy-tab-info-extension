@@ -152,7 +152,7 @@ function popupMenuItemClick(e) {
 
     case "copy_link_of_active_tab_in_current_window_as_rednotebook":
     getActiveTabInCurrentWindow(function (activeTabInCurrentWindow) {
-      ClipboardUtils.copyText("[" + activeTabInCurrentWindow.title + " \"\"http://" + activeTabInCurrentWindow.url + "\"\"]");
+      ClipboardUtils.copyText("[" + activeTabInCurrentWindow.title + " \"\"" + activeTabInCurrentWindow.url + "\"\"]");
       window.close();
     });
     break;
